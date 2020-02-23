@@ -1,0 +1,38 @@
+<div class="container">
+    <h3>Home</h3>
+    <div id=test-history>
+        <h4>My Test History</h4>
+        <div class="alert alert-warning" role="alert" *ngIf="tests == null || tests == undefined || tests.length == 0">
+            No records!
+        </div>
+
+        <div id="history-table"class="table-responsive" *ngIf="tests.length != 0">
+            <table class="table text-black table-striped">
+                <thead>
+                    <tr style="background-color: #518ba7;">
+                        <th scope="col">#</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Correct Answers</th>
+                        <th scope="col">Total Questions</th>
+                        <th scope="col">Percentage Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let test of tests; index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{test.date}}</td>
+                        <td>
+                            {{test.numCorrect}}
+                        </td>
+                        <td>{{test.totalQns}}</td>
+                        <td>{{test.percent}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="new-test-button-div">
+        <button id="btnNewTest" class="btn btn-success btn-lg" (click)="startNewTest()" >Start New Test</button>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+#new-test-button-div{
+    text-align: center;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #8ad1f4;
+}
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: #518ba7;
+}
+
+.active-button {
+    color: gold;
+    background-color: #f0eff1;
+}
+
+.table-responsive {
+    overflow-x: initial;
+    overflow-y: hidden;
+}
+
+#test-history{
+    margin: 1em 0;
+    border: 1px solid #cccccc;
+    padding: 1em;
+}
+
+.container{
+    margin-top: 1em;
+}
+
+#history-table{
+    max-height: 500px;
+    overflow-y: scroll;
+}

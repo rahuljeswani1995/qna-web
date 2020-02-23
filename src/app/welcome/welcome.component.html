@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="col-lg-8 col-md-8 mx-auto">
+        <div class="card rounded shadow">
+            <div class="card-header">
+                <h3 class="mb-0">Login</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" [value]="name" placeholder="Enter Name"
+                        (blur)="onNameCommit($event.target.value)" class="form-control form-control-lg" id="uname">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="text" placeholder="Enter Email" (blur)="onEmailCommit($event.target.value)"
+                        class="form-control form-control-lg" id="email" [value]="email">
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg float-right" (click)="onLoginClick()" id="btnLogin">Login</button>
+            </div>
+        </div>
+    </div>
+
+</div>

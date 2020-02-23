@@ -1,0 +1,39 @@
+#test-container{
+    align-content: center;
+    margin-top: 1em;
+}
+#dropdown-container{
+    align-content: center;
+    margin-bottom: .5em;
+}
+#content-div{
+    padding: 1em;
+    border: 1px solid #999999;
+    margin-bottom: 1em;
+    background-color: #eeeeee;
+}
+#questions-container{
+    max-height: 500px;
+    overflow-y: scroll;
+    border: 2px solid black;
+    padding: 0;
+}
+#footer-div{
+    text-align: center;
+}
+.qDiv{
+    cursor: pointer;
+    border: 1px solid;
+    text-align: center;
+}
+.qLabel{
+    cursor: pointer;
+}
+.attempted-qn{
+    background-color:#28A745;
+    color: white;
+}
+.selected-qn{
+    background-color: #bbbbbb;
+    color: black;
+}

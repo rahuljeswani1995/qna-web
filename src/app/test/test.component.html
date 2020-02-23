@@ -1,0 +1,43 @@
+<div id="test-container" class="container">
+    <div id="content-div">
+        <div id="dropdown-container">
+            <!-- Dropdown for sections -->
+            <h4 style="display: inline-block; margin-right: 1em">Category: </h4>
+            <select (change)="onSectionFilter($event.target.value)">
+                <option selected value="all">All</option>
+                <option *ngFor="let section of sections" [value]="section">{{section}}</option>
+            </select>
+        </div>
+
+        <div id="questions-container" class="float-left col-lg-2 col-md-2">
+            <div class="qDiv"
+                [ngClass]="{'attempted-qn': question.userSelection != null, 'selected-qn' : currentQuestion.id == question.id }"
+                (click)="onQuestionSelect(question.id)" *ngFor="let question of questionsToDisplay">
+                <label class="qLabel">
+                    Q.{{question.serialNum}}
+                </label>
+            </div>
+        </div>
+
+        <!-- question detail -->
+        <div id="question-detail" class="float-left col-lg-10 col-md-10">
+            <h3>Q.{{currentQuestion.serialNum}}</h3>
+            <p id="question-para" [innerHTML]="currentQuestion.text"></p>
+
+            <div *ngFor="let option of currentQuestion.options" class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio" [value]="option.id"
+                        [checked]="currentQuestion.userSelection===option.id"
+                        (change)="onAnswerSelect($event.target.value)">{{option.text}}
+                </label>
+            </div>
+        </div>
+
+        <div class="clear-left"></div>
+    </div>
+    <div id="footer-div">
+        <!-- Next and previous buttons -->
+        <button id="btnSubmit" class="btn btn-success btn-lg" (click)="onSubmit()">Submit Test</button>
+    </div>
+
+</div>

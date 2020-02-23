@@ -1,0 +1,11 @@
+{
+    "/api/*": {
+        "target": "http://lsatmaxadmin.us/",
+        "secure": false,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/api": ""
+          },
+        "changeOrigin": true
+    }
+}
