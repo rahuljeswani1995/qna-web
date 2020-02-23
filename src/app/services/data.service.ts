@@ -11,6 +11,6 @@ export class DataService {
 
   getData(): Observable<any>{
       // return this.http.get("http://lsatmaxadmin.us/interview/loadData.php");
-      return this.http.get("http://cors-anywhere.herokuapp.com/lsatmaxadmin.us/interview/loadData.php");
+      return this.http.get("https://cors-anywhere.herokuapp.com/lsatmaxadmin.us/interview/loadData.php");
   }
 }
