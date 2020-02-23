@@ -6,7 +6,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { QuestionDetailComponent } from './question-detail/question-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { QuestionDetailComponent } from './question-detail/question-detail.compo
     WelcomeComponent,
     TestComponent,
     MainPageComponent,
-    QuestionDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -305,12 +305,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./main-page/main-page.component */
     "./src/app/main-page/main-page.component.ts");
-    /* harmony import */
-
-
-    var _question_detail_question_detail_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! ./question-detail/question-detail.component */
-    "./src/app/question-detail/question-detail.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -330,7 +324,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_4__["WelcomeComponent"], _test_test_component__WEBPACK_IMPORTED_MODULE_6__["TestComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_7__["MainPageComponent"], _question_detail_question_detail_component__WEBPACK_IMPORTED_MODULE_8__["QuestionDetailComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_4__["WelcomeComponent"], _test_test_component__WEBPACK_IMPORTED_MODULE_6__["TestComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_7__["MainPageComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]]
       });
     })();
@@ -341,7 +335,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_4__["WelcomeComponent"], _test_test_component__WEBPACK_IMPORTED_MODULE_6__["TestComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_7__["MainPageComponent"], _question_detail_question_detail_component__WEBPACK_IMPORTED_MODULE_8__["QuestionDetailComponent"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_4__["WelcomeComponent"], _test_test_component__WEBPACK_IMPORTED_MODULE_6__["TestComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_7__["MainPageComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]],
           providers: [],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -652,144 +646,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./src/app/question-detail/question-detail.component.ts":
-  /*!**************************************************************!*\
-    !*** ./src/app/question-detail/question-detail.component.ts ***!
-    \**************************************************************/
-
-  /*! exports provided: QuestionDetailComponent */
-
-  /***/
-  function srcAppQuestionDetailQuestionDetailComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "QuestionDetailComponent", function () {
-      return QuestionDetailComponent;
-    });
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _services_shared_state_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ../services/shared-state.service */
-    "./src/app/services/shared-state.service.ts");
-    /* harmony import */
-
-
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-
-    function QuestionDetailComponent_div_1_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "label", 3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "input", 4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var option_r16 = ctx.$implicit;
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", option_r16.id);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", option_r16.text, " ");
-      }
-    }
-
-    var QuestionDetailComponent =
-    /*#__PURE__*/
-    function () {
-      function QuestionDetailComponent(sharedSvc) {
-        _classCallCheck(this, QuestionDetailComponent);
-
-        this.sharedSvc = sharedSvc;
-      }
-
-      _createClass(QuestionDetailComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          this.question = this.sharedSvc.getQuestionDetail(this.questionId);
-        }
-      }]);
-
-      return QuestionDetailComponent;
-    }();
-
-    QuestionDetailComponent.ɵfac = function QuestionDetailComponent_Factory(t) {
-      return new (t || QuestionDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_shared_state_service__WEBPACK_IMPORTED_MODULE_1__["SharedStateService"]));
-    };
-
-    QuestionDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
-      type: QuestionDetailComponent,
-      selectors: [["question-detail"]],
-      inputs: {
-        questionId: "questionId"
-      },
-      decls: 2,
-      vars: 1,
-      consts: [["id", "question-para"], ["class", "form-check", 4, "ngFor", "ngForOf"], [1, "form-check"], [1, "form-check-label"], ["type", "radio", "name", "optradio", 1, "form-check-input", 3, "value"]],
-      template: function QuestionDetailComponent_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "p", 0);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, QuestionDetailComponent_div_1_Template, 4, 2, "div", 1);
-        }
-
-        if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.question.options);
-        }
-      },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]],
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3F1ZXN0aW9uLWRldGFpbC9xdWVzdGlvbi1kZXRhaWwuY29tcG9uZW50LmNzcyJ9 */"]
-    });
-    /*@__PURE__*/
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](QuestionDetailComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-          selector: 'question-detail',
-          templateUrl: './question-detail.component.html',
-          styleUrls: ['./question-detail.component.css']
-        }]
-      }], function () {
-        return [{
-          type: _services_shared_state_service__WEBPACK_IMPORTED_MODULE_1__["SharedStateService"]
-        }];
-      }, {
-        questionId: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }]
-      });
-    })();
-    /***/
-
-  },
-
-  /***/
   "./src/app/resolvers/test-data.resolver.ts":
   /*!*************************************************!*\
     !*** ./src/app/resolvers/test-data.resolver.ts ***!
@@ -941,90 +797,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
         }];
       }, null);
-    })();
-    /***/
-
-  },
-
-  /***/
-  "./src/app/services/shared-state.service.ts":
-  /*!**************************************************!*\
-    !*** ./src/app/services/shared-state.service.ts ***!
-    \**************************************************/
-
-  /*! exports provided: SharedStateService */
-
-  /***/
-  function srcAppServicesSharedStateServiceTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "SharedStateService", function () {
-      return SharedStateService;
-    });
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-
-    var SharedStateService =
-    /*#__PURE__*/
-    function () {
-      function SharedStateService() {
-        _classCallCheck(this, SharedStateService);
-
-        this.questions = [];
-      }
-
-      _createClass(SharedStateService, [{
-        key: "setQuestions",
-        value: function setQuestions(questions) {
-          var _this = this;
-
-          questions.forEach(function (q) {
-            _this.questions.push(q);
-          });
-        }
-      }, {
-        key: "getQuestions",
-        value: function getQuestions() {
-          return JSON.parse(JSON.stringify(this.questions));
-        }
-      }, {
-        key: "getQuestionDetail",
-        value: function getQuestionDetail(questionId) {
-          return this.questions.find(function (el) {
-            return el.id === questionId;
-          });
-        }
-      }]);
-
-      return SharedStateService;
-    }();
-
-    SharedStateService.ɵfac = function SharedStateService_Factory(t) {
-      return new (t || SharedStateService)();
-    };
-
-    SharedStateService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
-      token: SharedStateService,
-      factory: SharedStateService.ɵfac,
-      providedIn: 'root'
-    });
-    /*@__PURE__*/
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SharedStateService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-          providedIn: 'root'
-        }]
-      }], null, null);
     })();
     /***/
 
@@ -1288,11 +1060,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(TestComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this2 = this;
+          var _this = this;
 
           this.questionParaEl = document.getElementById("question-para");
           this.route.data.subscribe(function (res) {
-            _this2.serverData = res.serverData;
+            _this.serverData = res.serverData;
           });
           this.questionsModel = this.transformIntoModel(this.serverData);
           this.questionsToDisplay = this.questionsModel;
